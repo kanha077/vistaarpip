@@ -1,3 +1,0 @@
-❌ No Firebase credentials found!
-   → Place serviceAccountKey.json in Backend/ folder
-   → Or set FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY in .env
