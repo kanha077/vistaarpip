@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: worker
+  namespace: vistaar
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: worker
+
+  template:
+    metadata:
+      labels:
+        app: worker
+
+    spec:
+      containers:
+        - name: worker
+          image: news-worker:latest
+          imagePullPolicy: IfNotPresent
+
+          envFrom:
+            - configMapRef:
+                name: app-config

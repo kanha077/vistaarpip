@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata:
+  name: app-config
+  namespace: vistaar
+
+data:
+  APP_REDIS_HOST: "redis"
+  APP_REDIS_PORT: "6379"
+  APP_ENV: "production"
